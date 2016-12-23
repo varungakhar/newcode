@@ -341,6 +341,10 @@ static NSString *const SDKSampleAppLicenseKey = @"GOSK-FC42-0100-24F0-9707-DC6C"
 //    image=[UIImage imageWithData:daa];
 //    
 //    [self multipart:image requestDictionary:dict];
+    
+    
+    
+    
 }
 -(void)sendthumnail
 {
