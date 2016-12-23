@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16A319" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VideoPlayerViewController">
+            <connections>
+                <outlet property="view" destination="dkH-aC-wE5" id="FiN-NR-auD"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="dkH-aC-wE5">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q3E-kX-ujA">
+                    <rect key="frame" x="79.5" y="38" width="45" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="45" id="Xob-eX-8rk"/>
+                    </constraints>
+                    <state key="normal" image="torch_on_button"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ne-Id-UHb">
+                    <rect key="frame" x="134.5" y="38" width="45" height="45"/>
+                    <state key="normal" image="mic_on_button"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0kb-SJ-587">
+                    <rect key="frame" x="123" y="487" width="75" height="75"/>
+                    <state key="normal" image="start_button"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VoP-of-P8g">
+                    <rect key="frame" x="4" y="515" width="45" height="45"/>
+                    <state key="normal" image="switch_camera_button"/>
+                    <connections>
+                        <action selector="didTapSwitchCameraButton:" destination="-1" eventType="touchUpInside" id="lcv-1m-3R1"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pa7-Lu-ctV">
+                    <rect key="frame" x="134.5" y="451" width="51.5" height="30"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40002985670000002" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="1Qp-ca-Usw"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ua0-wB-iOm">
+                    <rect key="frame" x="66" y="168" width="46" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="didTapCancel:" destination="-1" eventType="touchUpInside" id="zCL-zt-Gcc"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="0kb-SJ-587" firstAttribute="top" secondItem="pa7-Lu-ctV" secondAttribute="bottom" constant="6" id="3Xo-wu-AUl"/>
+                <constraint firstItem="8Ne-Id-UHb" firstAttribute="top" secondItem="q3E-kX-ujA" secondAttribute="top" id="7cu-hX-Cd0"/>
+                <constraint firstItem="q3E-kX-ujA" firstAttribute="top" secondItem="dkH-aC-wE5" secondAttribute="top" constant="38" id="KvP-uO-bob"/>
+                <constraint firstItem="8Ne-Id-UHb" firstAttribute="leading" secondItem="pa7-Lu-ctV" secondAttribute="leading" id="TIT-m5-U1x"/>
+                <constraint firstItem="pa7-Lu-ctV" firstAttribute="centerX" secondItem="0kb-SJ-587" secondAttribute="centerX" id="Vid-l8-7M0"/>
+                <constraint firstAttribute="bottom" secondItem="0kb-SJ-587" secondAttribute="bottom" constant="6" id="exA-0v-GRk"/>
+                <constraint firstItem="VoP-of-P8g" firstAttribute="bottom" secondItem="dkH-aC-wE5" secondAttribute="bottomMargin" id="jXZ-A0-fFE"/>
+                <constraint firstItem="8Ne-Id-UHb" firstAttribute="leading" secondItem="q3E-kX-ujA" secondAttribute="trailing" constant="10" id="wsT-tH-PIk"/>
+                <constraint firstItem="0kb-SJ-587" firstAttribute="leading" secondItem="VoP-of-P8g" secondAttribute="trailing" constant="74" id="x5t-Db-bnF"/>
+                <constraint firstItem="pa7-Lu-ctV" firstAttribute="centerX" secondItem="dkH-aC-wE5" secondAttribute="centerX" id="zLE-k2-IQh"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="mic_on_button" width="45" height="45"/>
+        <image name="start_button" width="75" height="75"/>
+        <image name="switch_camera_button" width="45" height="45"/>
+        <image name="torch_on_button" width="45" height="45"/>
+    </resources>
+</document>
